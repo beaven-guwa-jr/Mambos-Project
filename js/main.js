@@ -49,19 +49,6 @@ window.onload = function(){
           });
       });
      
-      var tabs = document.querySelectorAll('.customer li button');
-      tabs.forEach(function(tabs, index){
-          tabs.addEventListener('click', function(){
-              var currentTab = document.querySelector('.tab-content[data-tab-content="' + this.dataset.tabTrigger + '"]');
-
-              // remove classess
-              document.querySelector('.tab-content.is-open').classList.remove('is-open');
-              document.querySelector('.tabs li button.is-active').classList.remove('is-active');
-              // add classes
-              currentTab.classList.add('is-open');
-              this.classList.add('is-active');
-          });
-      });
 
     //   SPECIALS CAROUSEL
      
@@ -70,6 +57,8 @@ window.onload = function(){
         centerPadding: '60px',
         mobileFirst:true,//add this one
         slidesToShow: 1,
+        autoplay:true,
+        speed: 300,
         responsive: [
         {
             breakpoint: 480,

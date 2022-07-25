@@ -145,6 +145,9 @@ header{
         }
         .mobile-nav{
           display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
           justify-content: center;
           position: fixed;
           bottom: 100%;
@@ -152,7 +155,7 @@ header{
           width: 100%;
           min-height: 100%;
         
-          background-color:RED;
+          background-color:white;
           padding-top: 120px;
           transition: 0.4s;
           margin-top:50px ;
@@ -216,7 +219,10 @@ header{
                     height: 49px;
                     margin-top: 40px;
                     
-                    span{ font-size: 22px;  }
+                    span{ font-size: 22px; }
+                    #first{
+
+                    }
                     #last{
                         align-self:flex-end;
                     }
@@ -324,7 +330,10 @@ header{
     .inner{
         display: flex;
         justify-content: space-between;
-    
+        ul{
+           display: flex;
+           flex-wrap: wrap;
+        }
         hr{
             margin:0 auto 69px;
             height: 3px;
@@ -1354,22 +1363,12 @@ footer{
                            span{
                                font-family:'Mon-bold';
                                display: flex;
-                            //    hr{
-                            //        pos
-                            //     width: 100%;
-                            //     background: #FFCB1D;
-                            //    }
-                        
                            }
-                           
                        }
                        span::after{
                         content: '';
                         display: block;
-                       
                         height: 5px;
-                        
-
                        }
                     }
                     .btn{
@@ -1390,6 +1389,10 @@ footer{
                     }
                     .btn:hover{
                         transition:  1s;
+                        #first{
+                            align-self: flex-start;
+                            transform: rotateX(180deg);
+                        }
                         #last{
                             align-self: flex-start;
                             transform: rotateX(180deg);
